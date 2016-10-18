@@ -10,6 +10,5 @@ def generate_graph_array():
     if request.method == 'POST':
         obj = request.get_json()
         origin_graph = obj['graph']
-        result_graph = []
-        graph_topo_to_array(origin_graph,result_graph)
+        result_graph = graph_topo_to_array(origin_graph)
         return jsonify({'graph':result_graph})
